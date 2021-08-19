@@ -1,0 +1,63 @@
+name: Build React Webpage
+
+on:
+  push:
+    branches: [ branch-1 ]
+  pull_request:
+    branches: [ branch-1 ]
+
+jobs:
+  cancel:
+    name: Cancel
+    runs-on: ubuntu-latest
+    steps:
+      - name: Cancel Previous Runs
+        if: ${{ github.event_name == 'push' }}
+        uses: styfle/cancel-workflow-action@0.9.0
+        with:
+          access_token: ${{ github.token }}
+  build:
+    name: Build
+    needs: cancel
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout Repo
+      uses: actions/checkout@v2
+    
+    - name: Install Node.js
+      uses: actions/setup-node@v1
+      with:
+        node-version: 14.x
+    
+    - name: Install NPM packages
+      run: npm install
+    
+    - name: Build Generation
+      run: npm run build
+
+    - name: Upload build artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: production-files
+        path: ./build
+        if-no-files-found: error
+  
+  deploy:
+    name: Deploy
+    needs: build
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/branch-1'
+    
+    steps:
+    - name: Download artifact
+      uses: actions/download-artifact@v2
+      with:
+        name: production-files
+        path: ./build
+
+    - name: Deploy to gh-pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./build
