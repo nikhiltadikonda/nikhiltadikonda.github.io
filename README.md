@@ -1,4 +1,15 @@
-# Getting Started with Create React App
+# Nikhil Tadikonda's Personal Website
+
+
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/nikhiltadikonda/nikhiltadikonda.github.io/Build%20React%20Webpage?style=flat-square&logo=github&logoWidth=20)
+![GitHub issues](https://img.shields.io/github/issues/nikhiltadikonda/nikhiltadikonda.github.io?style=flat-square&logo=github&logoWidth=20)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/nikhiltadikonda/nikhiltadikonda.github.io?style=flat-square&logo=github&logoWidth=20)
+
+![GitHub language count](https://img.shields.io/github/languages/count/nikhiltadikonda/nikhiltadikonda.github.io?style=flat-square&logo=github&logoWidth=20)
+![GitHub Repo stars](https://img.shields.io/github/stars/nikhiltadikonda/nikhiltadikonda.github.io?style=flat-square&logo=github&logoWidth=20)
+![GitHub Repo stars](https://img.shields.io/github/forks/nikhiltadikonda/nikhiltadikonda.github.io?style=flat-square&logo=github&logoWidth=20)
+
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
