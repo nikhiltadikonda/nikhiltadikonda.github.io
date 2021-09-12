@@ -2,10 +2,8 @@ import React from 'react';
 
 function About(){
     return(
-        <div>
-            <center>
-                <h1>¯\_(ツ)_/¯</h1>
-            </center>
+        <div className = "about">
+            <h1 className = "shruggie">¯\_(ツ)_/¯</h1>
         </div>
     );
 }
