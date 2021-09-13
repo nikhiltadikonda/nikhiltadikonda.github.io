@@ -153,4 +153,27 @@ p{
         padding-bottom: 5px;
 
     }
+
+    .profile-img{
+        width: 200px;
+        margin-left: 200px;
+        position: static;
+    }
+}
+
+@media (max-width: 700px){
+    .profile-img{
+        width: 200px;
+        margin-left: 200px;
+        position: static;
+    }
+}
+
+@media (max-width: 600px){
+
+    .profile-img{
+        width: 200px;
+        margin-left: 70px;
+        position: static;
+    }
 }
