@@ -1,62 +1,173 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>Nikhil Tadikonda</title>
-        <link rel="stylesheet" href="css/styles.css">
-        <link rel="icon" href="favicon.ico">
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital@1&family=Sacramento&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
-    </head>
-    <body>
-        <div class="top-cont">
-            <img class="top-cloud" src="images/cloud.png" alt="cloud-img">
-            <h1>Nikhil Tadikonda</h1>
-            <p class="name-info">Attention is Vitality 🍃<br>¯\_(ツ)_/¯</p>
-            <img class="bottom-cloud" src="images/cloud.png" alt="cloud-img">
-            <img  class="mountain"src="images/mountain.png" alt="mountain-img">
+<!doctype html>
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="icon" href="images/letter-n.png">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Ubuntu&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!--Bootstrap JS-->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    
+    <title>Nikhil Tadikonda</title>
+  </head>
+  <body>
+    <!-- Header Info -->
+    <!-- Includes Navigation Bar and Summary -->
+    <section id="title">
+      <div class="container-fluid">
+
+        <!-- Navigation Bar -->
+        <nav class="navbar navbar-expand-lg navbar-dark"> <!--or bg-primary for Blue-->
+          <a class="navbar-brand" href="#">
+            <img id="navbar-image" src="images/SF3.png" width="50" height="50" alt="profile-image">
+            Nikhil Tadikonda
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          
+          <div class="collapse navbar-collapse" id="navbarText">
+
+            <!-- Navbar Options List -->
+            <ul class="navbar-nav ml-auto">
+              <li class"nav-item">
+                <a class="nav-link" href="#languages">Languages</a>
+              </li>
+              <li class"nav-item">
+                <a class="nav-link" href="#projects">Projects</a>
+              </li>
+              <li class"nav-item">
+                <a class="nav-link" href="#cta">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <!-- Navigation Bar Ends -->
+
+        <!-- Header Info -->
+        <div class="row">
+          <div class="col-lg-6">
+            <h1 class="sample">Hello, I'm Nikhil Tadikonda</h1>
+            <p id="header-paragraph">I would like to be associated with a dynamic and progressive organization that will allow me to utilize my abilities and qualifications in the field to add value to the organization while providing me with opportunities for growth.</p>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <img class="profile-img" src="images/SF3.png" width="300" height="250" alt="profile-image">
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Header Info Ends -->
+
+    <!-- Languages Info -->
+    <section id="languages">
+      <h2>Languages I'm perfect in: </h2>
+      <div class="row">
+        <div class="language-box col-lg-4">
+
+          <img class="language-icon" src="images/python.png" width="70" height="70" alt="python-icon">
+          <h3>Python</h3>
+          
+        </div>
+        <div class="language-box col-lg-4">
+        
+          <img class="language-icon" src="images/java.png" width="70" height="70" alt="java-icon">
+          <h3>Java</h3>
+          
+        </div>
+        <div class="language-box col-lg-4">
+        
+          <img class="language-icon" src="images/javascript.png" width="70" height="70" alt="javascript-icon">
+          <h3>JavaScript</h3>
+        
+        </div>
+      </div>
+    </section>
+    <!-- Languages Info Ends -->
+
+    <!-- Projects Info -->
+    <section id="projects">
+
+      <h2 id="project-title">My Projects</h2>
+      <p id="project-subtitle">Well, I made some useful projects</p>
+
+
+      <!-- Project Card Info -->
+      <div class="row">
+        <div class="project-column col-lg-4 col-md-6">
+          <div class="card">
+            <div class="card-header">
+              <h3 class="project-box-title">Traditional Face Detection</h3>
+            </div>
+            <div class="card-body">
+              <p>Detects Faces from an Image and a Webcam too</p>
+              <button class="btn btn-lg btn-block  btn-outline-primary">View on Github</button>
+            </div>
+          </div>
         </div>
 
-        <div class="middle-cont">
-            <div class="profile">
-                <img class="profile-pic" src="images/SF3.png" alt="SF3">
-                <h2>Hello</h2>
-                <p class="intro">I'm a Student, Programmer, willing to learn new skills and Technologies</p>
+        <div class="project-column col-lg-4 col-md-6">
+          <div class="card">
+            <div class="card-header">
+              <h3 class="project-box-title">Personal Website Model-1</h3>
             </div>
-            <hr>
-            <div class="skills">
-                <h2>My Skills</h2>
-                <div class="skill-row">
-                    <img class="man-img" src="images/man.png" alt="interest">
-                    <h3>Personal Interest</h3>
-                    <p>I Started Coding at the age of 17<br>And, I would like to gain Hands-on Experience on Mobile and Web App Development</p>
-                </div>
-                <div class="skill-row">
-                    <img class="proj-img" src="images/project.png" alt="project">
-                    <h3>Projects</h3>
-                    <p>1. Traditional Face Detection<br>2. Personal Website</p>
-                </div>
+            <div class="card-body">
+              <p>A Simple Website which looks pretty good</p>
+              <button class="btn btn-lg btn-block  btn-outline-primary">View on Github</button>
             </div>
-            <hr>
-            <div class="contact-me">
-                <h2>Get in Touch</h2>
-                <img class="handshake-img" src="images/handshake.png" alt="handshake">
-                <h3>Interested about my content?</h3>
-
-                <a class="contactbtn" href="mailto:sample@email.com">CONTACT ME</a>
-            </div>
+          </div>
         </div>
 
-        <div class="bottom-cont">
-            <a class="footer-link" href="https://www.linkedin.com/">LinkedIn</a>
-            <a class="footer-link" href="https://twitter.com/">Twitter</a>
-            <a class="footer-link" href="https://github.com/nikhiltadikonda">Github</a>
-            <p class="copyright">© 
-                <script>
-                    document.write(new Date().getFullYear());                
-                </script>
-                Nikhil Tadikonda</p>
+        <div class="project-column col-lg-4">
+          <div class="card">
+            <div class="card-header">
+              <h3 class="project-box-title">Personal Website Model-2</h3>
+            </div>
+            <div class="card-body">
+              <p>Same Website, Looks somewhat professional than the older one</p>
+              <button class="btn btn-lg btn-block btn-outline-primary">View on Github</button>
+            </div>
+          </div>
         </div>
-    </body>
+      </div>
+    </section>
+    <!-- Projects Info Ends -->
+
+    <!-- Call to Action Info -->
+    <section id="cta">
+      <img class="profile-img-bottom" src="images/SF3.png" width="90" height="90" alt="profile-image">
+      <h3 class="cta-heading">Looks Fascinating?</h3>
+      <button class="btn btn-outline-dark btn-lg" onclick="">Contact Me</button>
+    </section>
+    <!-- Call to Action Info Ends -->
+
+    <!-- Copyright Info -->
+    <footer id="footer">
+      <img  class="social-icons" src="images/github.png" width="30" height="30" alt="github" onclick="window.open('https://github.com/nikhiltadikonda')">
+      <img class="social-icons" src="images/twitter.png" width="30" height="30" alt="twitter" onclick="window.open('https://twitter.com/nikhiltadikonda')">
+      <img class="social-icons" src="images/linkedin.png" width="30" height="30" alt="linkedin">
+      <img class="social-icons" src="images/envelope.png" width="30" height="30" alt="envelope">
+      
+      <p class="copyright-message">© Copyright 
+        <script>
+
+          document.write(new Date().getFullYear());
+
+        </script>
+        Nikhil Tadikonda. All Rights Reserved.</p>
+    </footer>
+    <!-- Copyright Info Ends -->
+  </body>
 </html>
