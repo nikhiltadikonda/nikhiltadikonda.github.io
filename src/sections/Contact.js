@@ -3,7 +3,8 @@ import React from 'react';
 function Contact(){
     return(
         <div className = "contact">
-            This site is under development, Please visit later.
+            This project was made with React.js and React Bootstrap.<br />
+            © Copyright {new Date().getFullYear()} Nikhil Tadikonda. All Rights Reserved.
         </div>
     );
 }

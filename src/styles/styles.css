@@ -1,0 +1,156 @@
+/* Sequence: Tags, followed by IDs followed by classes */
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+
+h1{
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.3rem;
+    line-height: 1.5;
+}
+
+h2{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    line-height: 1.5;
+    
+}
+h3{
+    font-family: 'Montserrat-Bold', sans-serif;
+    margin-bottom: 15px;
+}
+
+p{
+    font-size: 1rem;
+}
+
+/* Title Container */
+
+#header-paragraph{
+    color: #ffffff;
+    font-size: 1.3rem;
+    padding-top: 30px;
+
+}
+
+.title{
+    background-color: #343a40;
+    padding-bottom: 60px;
+    text-align: left;
+}
+.container-fluid{
+    padding: 0% 5% 9%;
+}
+
+.profile-img{
+    margin-left: 250px;
+    width: 250px;
+    border-radius: 50%;
+}
+
+
+
+/* Navigation Bar */
+
+.navbar{
+    padding-bottom: 4.5rem;
+}
+
+#navbar-image{
+    border-radius: 50%;
+}
+
+
+/* Languages Section */
+
+#languages{
+    padding: 7% 15%;
+    background-color: white;
+    position: relative;
+    z-index: 1;
+}
+
+
+.language-box{
+    padding: 5%;
+}
+
+.language-icon{
+    margin-bottom: 2.5rem;
+}
+
+/* Projects Section */
+
+#projects{
+    padding: 150px;
+    background-color: #323232;
+}
+
+#project-title{
+    color: #ffffff;
+}
+
+#project-subtitle{
+    color: #ffffff;
+    font-size: 1.5rem;
+
+}
+
+.project-column{
+    padding: 3% 2%;
+}
+
+.project-box-title{
+    padding-top: 10px;
+    font-size: 1.3rem;
+}
+
+
+/* Call to Action Section */
+
+#cta{
+    padding-top: 2%;
+    padding-bottom: 3%;
+}
+
+.profile-img-bottom{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+}
+
+.cta-heading{
+    font-family: Montserrat;
+    padding : 50px;
+    font-size: 2rem;
+}
+
+/* Footer Section */
+
+#footer{
+    
+    padding: 2% 0 0 0;
+}
+
+.copyright-message{
+    padding-top: 50px;
+}
+
+.social-icons{
+    margin: 1% 10%;
+}
+
+/* Media Query for Responsiveness, Applied for Title only. */
+
+@media (max-width: 990px){
+
+    #title{
+        text-align: center;
+        padding-bottom: 5px;
+
+    }
+}
