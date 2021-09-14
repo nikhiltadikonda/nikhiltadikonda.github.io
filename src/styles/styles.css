@@ -60,7 +60,8 @@ p{
     padding-bottom: 4.5rem;
 }
 
-#navbar-image{
+.navbar-image{
+    margin-right: 10px;
     border-radius: 50%;
 }
 
@@ -87,7 +88,7 @@ p{
 
 #projects{
     padding: 150px;
-    background-color: #323232;
+    background-color: #343a40;
 }
 
 #project-title{
@@ -121,10 +122,10 @@ p{
     width: 250px;
     height: 250px;
     border-radius: 50%;
+    margin-top: 30px;
 }
 
 .cta-heading{
-    font-family: Montserrat;
     padding : 50px;
     font-size: 2rem;
 }
@@ -155,7 +156,7 @@ p{
     }
 
     .profile-img{
-        width: 200px;
+        width: 250px;
         margin-left: 200px;
         position: static;
     }
@@ -163,8 +164,8 @@ p{
 
 @media (max-width: 700px){
     .profile-img{
-        width: 200px;
-        margin-left: 200px;
+        width: 250px;
+        margin-left: 100px;
         position: static;
     }
 }
@@ -172,8 +173,8 @@ p{
 @media (max-width: 600px){
 
     .profile-img{
-        width: 200px;
-        margin-left: 70px;
+        width: 250px;
+        margin-left: 50px;
         position: static;
     }
 }

@@ -1,5 +1,6 @@
 import React from "react";
 import {Navbar, Container, Nav} from 'react-bootstrap';
+import profile from '../images/profile.png';
 
 function Navigationbar() {
 
@@ -7,6 +8,7 @@ function Navigationbar() {
         <div>
             <Navbar bg="dark navbar-dark" expand="lg">
             <Container>
+                <img alt="" src={profile} width="50" height="50" className="d-inline-block align-top navbar-image" />{' '}
                 <Navbar.Brand href="#">Nikhil Tadikonda</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="collapse navbar-collapse">
