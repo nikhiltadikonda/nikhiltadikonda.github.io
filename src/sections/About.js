@@ -6,17 +6,17 @@ import NavBar from './NavBar';
 
 function About(){
 
-    const [data, setData] = React.useState(null);
+    const [quote, setQuote] = React.useState(null);
     const [spinner, setSpinner] = React.useState(false);
 
     React.useEffect(() => {
         axios.get(`${process.env.REACT_APP_QUOTES_API_URL}`).then((response) => {
             setSpinner(response.status !== 200);
-            setData(response.data);
+            setQuote(response.data);
         });
     }, []);
 
-    if (!data) return null;
+    if (!quote) return null;
 
     return(
         <div>
@@ -37,8 +37,8 @@ function About(){
                         </p> 
                     </Alert>
                     <Alert variant= "success">
-                        {spinner ? <Spinner animation="border" variant="success" /> : data.content}<hr />
-                        <p className = "quote-author"> - {data.author}</p>
+                        {spinner ? <Spinner animation="border" variant="success" /> : quote.content}<hr />
+                        <p className = "quote-author"> - {quote.author}</p>
                     </Alert>
                         {/* <p className = "header-paragraph">
                             I would like to be associated with a dynamic and progressive organization that will allow me to utilize my abilities and qualifications in the field to add value to the organization while providing me with opportunities for growth.
