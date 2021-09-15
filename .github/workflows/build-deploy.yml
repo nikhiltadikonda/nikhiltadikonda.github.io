@@ -20,6 +20,8 @@ jobs:
     name: Build
     needs: cancel
     runs-on: ubuntu-latest
+    env:
+      REACT_APP_QUOTES_API_URL: ${{ secrets.REACT_APP_QUOTES_API_URL }}
     
     steps:
     - name: Checkout Repo

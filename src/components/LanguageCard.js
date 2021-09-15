@@ -6,7 +6,7 @@ import '../styles/styles.css'
 function LanguageCard() {
     return (
             <Col lg={4} className="language-box">
-                <img class="language-icon" src={envelope} width="70" height="70" alt="language" />
+                <img className="language-icon" src={envelope} width="70" height="70" alt="language" />
                 <h3 className = "language-description">Lorem ipsum</h3>
             </Col>
         );

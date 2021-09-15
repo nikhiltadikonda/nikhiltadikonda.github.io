@@ -52,6 +52,11 @@ p{
     border-radius: 50%;
 }
 
+.quote-author{
+    text-align: right;
+    font-weight: bold;
+}
+
 
 
 /* Navigation Bar */

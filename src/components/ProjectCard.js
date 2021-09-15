@@ -5,9 +5,9 @@ function ProjectCard(){
 
     return(
         <Col className="project-column" lg={4} md={6}>
-            <Card> 
+            <Card className = "project-card"> 
                 <Card.Title>
-                    <h3 class="project-box-title">Project Title</h3>
+                    <h3 className="project-box-title">Project Title</h3>
                 </Card.Title>
                 <Card.Body>
                     <p>
@@ -15,7 +15,7 @@ function ProjectCard(){
                     </p>
                 <ButtonGroup size = "lg">
                     <Button variant = "primary">Open on Github</Button>
-                    <DropdownButton as={ButtonGroup} id="bg-nested-dropdown">
+                    <DropdownButton title="" as={ButtonGroup} id="bg-nested-dropdown">
                         <Dropdown.Item eventKey="1">Star repository</Dropdown.Item>
                         <Dropdown.Item eventKey="2">Fork Repository</Dropdown.Item>
                     </DropdownButton>
