@@ -1,10 +1,7 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
 import profile from '../images/profile.png';
-import github from '../images/github.png';
-import twitter from '../images/twitter.png';
-import linkedin from '../images/linkedin.png';
-import envelope from '../images/envelope.png';
+import ImageIcon from '../components/ImageIcon';
 
 function Contact(){
 
@@ -16,18 +13,15 @@ function Contact(){
                 <Button variant="dark" size="lg">Contact Me</Button>
             </section>
             <footer id="footer">
-                <img  className="social-icons" src={github} width="50" height="50" alt="github" />
-                <img className="social-icons" src={twitter} width="50" height="50" alt="twitter" />
-                <img className="social-icons" src={linkedin} width="50" height="50" alt="linkedin" />
-                <img className="social-icons" src={envelope} width="50" height="50" alt="envelope" />
-
+                <ImageIcon />
+                <ImageIcon />
+                <ImageIcon />
+                <ImageIcon />
                 <p className = "copyright-message">
-                    This project was made with React.js and React Bootstrap.<br />
-                    © Copyright {new Date().getFullYear()} Nikhil Tadikonda. All Rights Reserved.
+                    © Copyright {new Date().getFullYear() === 2021 ? new Date().getFullYear() : "2021 - " + new Date().getFullYear()}, All Rights Reserved.
                 </p>
 
             </footer>
-            {/*  */}
         </div>
     );
 }

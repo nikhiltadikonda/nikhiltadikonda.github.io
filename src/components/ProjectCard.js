@@ -1,26 +1,20 @@
 import React from 'react';
-import {Button, ButtonGroup, Col, Card, DropdownButton, Dropdown} from 'react-bootstrap';
+import {Button, Col, Card} from 'react-bootstrap';
 
-function ProjectCard(){
+function ProjectCard(props){
 
     return(
         <Col className="project-column" lg={4} md={6}>
-            <Card className = "project-card"> 
+            <Card className = "project-card repo-card"> 
                 <Card.Title>
-                    <h3 className="project-box-title">Project Title</h3>
+                    <h3 className="project-box-title">{props.name}</h3>
                 </Card.Title>
+                <hr/>
                 <Card.Body>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                        {props.description == null ? "No description available" : (props.description.length > 100 ? props.description.substring(0, 100) + "..." : props.description)}
                     </p>
-                <ButtonGroup size = "lg">
                     <Button variant = "primary">Open on Github</Button>
-                    <DropdownButton title="" as={ButtonGroup} id="bg-nested-dropdown">
-                        <Dropdown.Item eventKey="1">Star repository</Dropdown.Item>
-                        <Dropdown.Item eventKey="2">Fork Repository</Dropdown.Item>
-                    </DropdownButton>
-                </ButtonGroup>
-                    {/* <Button size = "lg" variant = "primary">View on Github</Button> */}
                 </Card.Body>
             </Card>
         </Col>
