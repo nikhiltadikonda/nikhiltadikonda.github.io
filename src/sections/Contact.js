@@ -2,6 +2,7 @@ import React from 'react';
 import Button from 'react-bootstrap/Button';
 import profile from '../images/profile.png';
 import ImageIcon from '../components/ImageIcon';
+import contact_data from '../helpers/contact_data';
 
 function Contact(){
 
@@ -13,10 +14,7 @@ function Contact(){
                 <Button variant="dark" size="lg">Contact Me</Button>
             </section>
             <footer id="footer">
-                <ImageIcon />
-                <ImageIcon />
-                <ImageIcon />
-                <ImageIcon />
+                {contact_data.map(ImageIcon)}
                 <p className = "copyright-message">
                     © Copyright {new Date().getFullYear() === 2021 ? new Date().getFullYear() : "2021 - " + new Date().getFullYear()}, All Rights Reserved.
                 </p>

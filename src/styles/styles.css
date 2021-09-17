@@ -6,7 +6,7 @@ body{
 }
 
 h1{
-    color: white;
+    /* color: white; */
     font-family: 'Ubuntu', sans-serif;
     font-family: 'Montserrat', sans-serif;
     font-size: 2.3rem;
@@ -16,10 +16,11 @@ h1{
 h2{
     font-family: 'Montserrat', sans-serif;
     font-size: 2.5rem;
+    padding-bottom: 50px;
     line-height: 1.5;
     
 }
-h3{
+h4{
     font-family: 'Montserrat-Bold', sans-serif;
     margin-bottom: 15px;
 }
@@ -45,7 +46,7 @@ p{
 
 .title{
     background-color: #212529;
-    padding-bottom: 60px;
+    padding-bottom: 130px;
     text-align: left;
 }
 .container-fluid{
@@ -83,20 +84,31 @@ p{
 
 /* Languages Section */
 
-#languages{
+#skills{
     padding: 10% 15%;
     background-color: white;
     position: relative;
     z-index: 1;
+    padding-bottom: 20%;
 }
 
+.skill-badge{
+    border: 1px solid black;
+    font-size: 1rem;
+    padding: 10px;
+    margin-left: 30px;
+    margin-bottom: 10px;
+    margin-top: 10px;
 
-.language-box{
-    padding: 5%;
 }
 
-.language-icon{
+.skill-icon{
     margin-bottom: 2.5rem;
+}
+
+.skill-description{
+    /* font-size: 4rem; */
+    position: static;
 }
 
 /* Projects Section */
@@ -126,9 +138,10 @@ p{
 }
 
 .repo-card{
+    border-radius: 2%;
     margin: 0 auto; /* Added */
-        float: none; /* Added */
-        margin-bottom: 10px; /* Added */
+    float: none; /* Added */
+    margin-bottom: 10px; /* Added */
 }
 
 
@@ -199,6 +212,16 @@ p{
         width: 250px;
         margin-top: 20px;
         margin-left: 140px;
+        position: static;
+    }
+}
+
+@media (max-width: 500px){
+
+    .profile-img{
+        width: 250px;
+        margin-top: 20px;
+        margin-left: 55px;
         position: static;
     }
 }

@@ -2,13 +2,13 @@ import React from 'react';
 import About from './sections/About';
 import Projects from './sections/Projects';
 import Contact from './sections/Contact';
-import Languages from './sections/Languages';
+import Skills from './sections/Skills';
 
 function App() {
   return (
     <div>
       <About />
-      <Languages />
+      <Skills />
       <Projects />
       <Contact />
     </div>

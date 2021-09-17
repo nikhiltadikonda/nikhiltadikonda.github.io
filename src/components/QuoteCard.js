@@ -17,21 +17,15 @@ function QuoteCard() {
 
     if (!quote) return null;
 
-
     return (
         <div>
-            {!card ? <Alert variant= "success">
-                        <Alert.Heading>Quote of the Moment</Alert.Heading>
-                        <hr />
+            {!card ?     
+                <Alert variant= "success" onClose={() => showCard(!card)} dismissible>
+                    <Alert.Heading>Quote of the Moment</Alert.Heading>
+                    <hr />
                         {spinner ? <Spinner animation="border" variant="success" /> : quote.content}
-                        <p className = "quote-author"> - {quote.author}</p>
-                        <hr />
-                        <div className="d-flex justify-content-end">
-                            <Button onClick={() => showCard(!card)} variant="outline-success">
-                                Close Quote
-                            </Button>
-                        </div>
-                    </Alert> : null}
+                    <p className = "quote-author"> - {quote.author}</p>
+                </Alert> : null}
             <div className = "quote-button">
                 {card && <Button variant = "outline-success" onClick={() => showCard(!card)}>Show Quote</Button>}
             </div>
