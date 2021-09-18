@@ -7,10 +7,10 @@ function ProjectCard(props){
 
     return(
         <Col key = {props.id} className="project-column" lg={4} md={6}>
-            <Card className = "project-card repo-card">
+            <Card className = "project-card-color project-card repo-card">
                 <Card.Img variant="top" src={url} /> 
                 <Card.Body>
-                    <Button variant = "outline-dark" >Open on Github</Button>
+                    <Button variant = "light" >Open on Github</Button>
                 </Card.Body>
             </Card>
         </Col>

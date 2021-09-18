@@ -28,6 +28,7 @@ function About(){
                 </Row>
                 </Container>
             </div>
+            <hr />
         </div>
     );
 }

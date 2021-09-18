@@ -1,6 +1,6 @@
 import React from 'react';
 import Container from 'react-bootstrap/Container';
-import SkillCard from '../components/SkillCard';
+import SkillBadge from '../components/SkillBadge';
 import skill_data from '../helpers/skill_data';
 
 
@@ -10,9 +10,10 @@ function Skills() {
         <section id="skills">
           <h2>My Technical Skills</h2>
           <Container>
-              {skill_data.map(SkillCard)}
+              {skill_data.map(SkillBadge)}
           </Container>
         </section>
+        <hr />
       </div>
   )
 }

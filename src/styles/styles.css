@@ -6,7 +6,6 @@ body{
 }
 
 h1{
-    /* color: white; */
     font-family: 'Ubuntu', sans-serif;
     font-family: 'Montserrat', sans-serif;
     font-size: 2.3rem;
@@ -32,13 +31,14 @@ p{
 /* Title Container */
 
 .title{
-    background-color: #212529;
+    padding-top: 100px;
     padding-bottom: 130px;
     text-align: left;
 }
 
 .profile-img{
     margin-left: 250px;
+    margin-top: 70px;
     width: 250px;
     text-align: center;
     border-radius: 50%;
@@ -57,7 +57,7 @@ p{
 /* Navigation Bar */
 
 .navbar{
-    padding-bottom: 4.5rem;
+    padding-bottom: 0.5rem;
 }
 
 .navbar-image{
@@ -97,7 +97,6 @@ p{
 }
 
 .skill-description{
-    /* font-size: 4rem; */
     position: static;
 }
 
@@ -105,17 +104,16 @@ p{
 
 #projects{
     padding: 50px;
-    background-color: #212529;
 }
 
-#project-title{
-    color: #ffffff;
-}
 
 #project-subtitle{
-    color: #ffffff;
     font-size: 1.5rem;
 
+}
+
+.project-card-color{
+    background-color: black;
 }
 
 .project-column{
@@ -128,9 +126,9 @@ p{
 }
 
 .repo-card{
-    margin: 0 auto; /* Added */
-    float: none; /* Added */
-    margin-bottom: 10px; /* Added */
+    margin: 0 auto;
+    float: none;
+    margin-bottom: 10px;
 }
 
 

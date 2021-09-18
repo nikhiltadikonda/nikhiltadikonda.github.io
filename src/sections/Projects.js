@@ -26,6 +26,7 @@ function Projects(){
                 {repoList.map(ProjectCard)}
             </Row>
             </section>
+            <hr />
         </div>
     );
 }
