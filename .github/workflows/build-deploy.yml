@@ -23,6 +23,8 @@ jobs:
     env:
       REACT_APP_QUOTES_API_URL: ${{ secrets.REACT_APP_QUOTES_API_URL }}
       REACT_APP_GITHUB_API_URL: ${{ secrets.REACT_APP_GITHUB_API_URL }}
+      REACT_APP_SOCIALIFY_URL : ${{ secrets.REACT_APP_SOCIALIFY_URL }}
+      REACT_APP_SOCIALIFY_URL_PARAM : ${{ secrets.REACT_APP_SOCIALIFY_URL_PARAM }}
     
     steps:
     - name: Checkout Repo
