@@ -11,7 +11,7 @@ function Contact(){
             <section id="contact">
                 <img className="profile-img-bottom" src={profile} width="90" height="90" alt="profile" />
                 <h3 className="cta-heading">Looks Fascinating?</h3>
-                <Button variant="dark" size="lg">Contact Me</Button>
+                <Button variant="outline-dark" size="lg">Contact Me</Button>
             </section>
             <footer id="footer">
                 {contact_data.map(ImageIcon)}

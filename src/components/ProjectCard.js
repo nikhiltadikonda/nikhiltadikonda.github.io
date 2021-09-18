@@ -10,11 +10,7 @@ function ProjectCard(props){
             <Card className = "project-card repo-card">
                 <Card.Img variant="top" src={url} /> 
                 <Card.Body>
-                    <Card.Title>
-                        <h3 className="project-box-title">{props.name}</h3>
-                    </Card.Title>
-                    <br />
-                    <Button variant = "primary">Open on Github</Button>
+                    <Button variant = "outline-dark" >Open on Github</Button>
                 </Card.Body>
             </Card>
         </Col>
