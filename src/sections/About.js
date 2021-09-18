@@ -1,7 +1,7 @@
 import React from 'react';
 import {Alert, Container, Row, Col} from 'react-bootstrap';
 import profile from '../images/profile.png'
-import NavBar from './NavBar';
+import NavBar from '../components/NavBar';
 import QuoteCard from '../components/QuoteCard';
 
 function About(){

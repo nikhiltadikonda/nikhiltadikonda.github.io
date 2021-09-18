@@ -31,26 +31,10 @@ p{
 
 /* Title Container */
 
-#header-paragraph{
-    color: #ffffff;
-    font-size: 1.3rem;
-    padding-top: 30px;
-
-}
-
-.badge{
-    size: 10px;
-    position: static;
-    padding-bottom: -10px;
-}
-
 .title{
     background-color: #212529;
     padding-bottom: 130px;
     text-align: left;
-}
-.container-fluid{
-    padding: 0% 5% 9%;
 }
 
 .profile-img{
@@ -90,6 +74,12 @@ p{
     position: relative;
     z-index: 1;
     padding-bottom: 20%;
+}
+
+.badge{
+    size: 10px;
+    position: static;
+    padding-bottom: -10px;
 }
 
 .skill-badge{
