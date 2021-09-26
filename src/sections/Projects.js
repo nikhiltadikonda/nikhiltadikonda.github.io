@@ -20,7 +20,6 @@ function Projects(){
             <section id="projects">
 
             <h1 id="project-title">My Projects</h1>
-            <p id="project-subtitle">Well, I made some projects</p>
 
             <Row>
                 {repoList.map(ProjectCard)}
