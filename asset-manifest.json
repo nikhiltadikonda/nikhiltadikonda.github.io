@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.4df3fa99.chunk.css",
-    "main.js": "/static/js/main.bef2f444.chunk.js",
-    "main.js.map": "/static/js/main.bef2f444.chunk.js.map",
+    "main.js": "/static/js/main.85091ac3.chunk.js",
+    "main.js.map": "/static/js/main.85091ac3.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.8d778e38.js",
     "runtime-main.js.map": "/static/js/runtime-main.8d778e38.js.map",
     "static/css/2.f2512455.chunk.css": "/static/css/2.f2512455.chunk.css",
@@ -14,7 +14,7 @@
     "static/css/2.f2512455.chunk.css.map": "/static/css/2.f2512455.chunk.css.map",
     "static/css/main.4df3fa99.chunk.css.map": "/static/css/main.4df3fa99.chunk.css.map",
     "static/js/2.101d064f.chunk.js.LICENSE.txt": "/static/js/2.101d064f.chunk.js.LICENSE.txt",
-    "static/media/android.bc0f796c.svg": "/static/media/android.bc0f796c.svg",
+    "static/media/android.022ae30b.svg": "/static/media/android.022ae30b.svg",
     "static/media/azure.307dcb22.svg": "/static/media/azure.307dcb22.svg",
     "static/media/c.a5205ccd.svg": "/static/media/c.a5205ccd.svg",
     "static/media/cpp.1f3ece5b.svg": "/static/media/cpp.1f3ece5b.svg",
@@ -26,6 +26,7 @@
     "static/media/firebase.06916b86.svg": "/static/media/firebase.06916b86.svg",
     "static/media/git.1f944ba9.svg": "/static/media/git.1f944ba9.svg",
     "static/media/github.d3263084.png": "/static/media/github.d3263084.png",
+    "static/media/github_1.7495fdae.png": "/static/media/github_1.7495fdae.png",
     "static/media/html.c4dc271e.svg": "/static/media/html.c4dc271e.svg",
     "static/media/java.9723b911.svg": "/static/media/java.9723b911.svg",
     "static/media/javascript.8ef0643e.svg": "/static/media/javascript.8ef0643e.svg",
@@ -36,13 +37,15 @@
     "static/media/python.5796bcef.svg": "/static/media/python.5796bcef.svg",
     "static/media/react.509d3028.svg": "/static/media/react.509d3028.svg",
     "static/media/react_bootstrap.efdec132.png": "/static/media/react_bootstrap.efdec132.png",
-    "static/media/twitter.89498832.png": "/static/media/twitter.89498832.png"
+    "static/media/twitter.89498832.png": "/static/media/twitter.89498832.png",
+    "static/media/visualstudio.fab5240e.svg": "/static/media/visualstudio.fab5240e.svg",
+    "static/media/vscode.b048913f.svg": "/static/media/vscode.b048913f.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.8d778e38.js",
     "static/css/2.f2512455.chunk.css",
     "static/js/2.101d064f.chunk.js",
     "static/css/main.4df3fa99.chunk.css",
-    "static/js/main.bef2f444.chunk.js"
+    "static/js/main.85091ac3.chunk.js"
   ]
 }
