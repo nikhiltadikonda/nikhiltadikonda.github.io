@@ -7,21 +7,25 @@ const contact_data = [
     {
       id: 1,
       img: envelope,
+      url: "mailto:nikhiltadikonda@gmail.com",
     },
 
     {
       id: 2,
       img: github,
+      url: "https://github.com/nikhiltadikonda",
     },
 
     {
         id: 3,
         img: linkedin,
+        url: "",
       },
     
       {
         id: 4,
         img: twitter,
+        url: "https://twitter.com/nikhiltadikonda",
       },
         
 ];
