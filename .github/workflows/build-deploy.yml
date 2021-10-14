@@ -2,9 +2,9 @@ name: Build React Webpage
 
 on:
   push:
-    branches: [ branch-1 ]
+    branches: [ master ]
   pull_request:
-    branches: [ branch-1 ]
+    branches: [ master ]
 
 jobs:
   cancel:
