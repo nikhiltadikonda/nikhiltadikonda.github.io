@@ -1,0 +1,214 @@
+/* Sequence: Tags, followed by IDs followed by classes */
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+
+h1{
+    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.3rem;
+    line-height: 1.5;
+}
+
+h2{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    padding-bottom: 50px;
+    line-height: 1.5;
+    
+}
+h4{
+    font-family: 'Montserrat-Bold', sans-serif;
+    margin-bottom: 15px;
+}
+
+p{
+    font-size: 1rem;
+}
+
+/* Title Container */
+
+.title{
+    padding-top: 100px;
+    padding-bottom: 130px;
+    text-align: left;
+}
+
+.profile-img{
+    margin-left: 250px;
+    margin-top: 70px;
+    width: 250px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.quote-author{
+    text-align: right;
+    font-weight: bold;
+}
+
+.quote-button{
+    text-align: center;
+}
+
+
+/* Navigation Bar */
+
+.navbar{
+    padding-bottom: 0.5rem;
+}
+
+.navbar-image{
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+
+/* Languages Section */
+
+#skills{
+    padding: 10% 15%;
+    background-color: white;
+    position: relative;
+    z-index: 1;
+    padding-bottom: 20%;
+}
+
+.badge{
+    size: 10px;
+    position: static;
+    padding-bottom: -10px;
+}
+
+.skill-badge{
+    border: 1px solid black;
+    font-size: 1rem;
+    padding: 10px;
+    margin-left: 30px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+
+}
+
+.skill-icon{
+    margin-bottom: 2.5rem;
+}
+
+.skill-description{
+    position: static;
+}
+
+/* Projects Section */
+
+#projects{
+    padding: 50px;
+}
+
+
+#project-subtitle{
+    font-size: 1.5rem;
+
+}
+
+.project-card-color{
+    background-color: black;
+}
+
+.project-column{
+    padding: 3% 2%;
+}
+
+.project-box-title{
+    padding-top: 10px;
+    font-size: 1.3rem;
+}
+
+.repo-card{
+    margin: 0 auto;
+    float: none;
+    margin-bottom: 10px;
+}
+
+
+/* Call to Action Section */
+
+#cta{
+    padding-top: 2%;
+    padding-bottom: 3%;
+}
+
+.profile-img-bottom{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    margin-top: 30px;
+}
+
+.cta-heading{
+    padding : 50px;
+    font-size: 2rem;
+}
+
+/* Footer Section */
+
+#footer{
+    
+    padding: 1% 0 0 0;
+}
+
+.copyright-message{
+    padding-top: 50px;
+}
+
+.social-icons{
+    margin: 2% 10%;
+}
+
+/* Media Query for Responsiveness, Applied for Title only. */
+
+@media (max-width: 990px){
+
+    #title{
+        text-align: center;
+        padding-bottom: 5px;
+
+    }
+
+    .profile-img{
+        width: 250px;
+        margin-top: 20px;
+        margin-left: 140px;
+        position: static;
+    }
+}
+
+@media (max-width: 700px){
+    .profile-img{
+        width: 250px;
+        margin-top: 20px;
+        margin-left: 140px;
+        position: static;
+    }
+}
+
+@media (max-width: 600px){
+
+    .profile-img{
+        width: 250px;
+        margin-top: 20px;
+        margin-left: 140px;
+        position: static;
+    }
+}
+
+@media (max-width: 500px){
+
+    .profile-img{
+        width: 250px;
+        margin-top: 20px;
+        margin-left: 55px;
+        position: static;
+    }
+}
