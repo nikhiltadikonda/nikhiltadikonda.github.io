@@ -52,7 +52,7 @@ jobs:
     name: Deploy
     needs: build
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/branch-1'
+    if: github.ref == 'refs/heads/master'
     
     steps:
     - name: Download artifact
