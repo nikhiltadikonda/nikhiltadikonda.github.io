@@ -19,7 +19,7 @@ const contact_data = [
     {
         id: 3,
         img: linkedin,
-        url: "www.linkedin.com/in/nikhil-tadikonda",
+        url: "https://www.linkedin.com/in/nikhil-tadikonda",
       },
     
       {
