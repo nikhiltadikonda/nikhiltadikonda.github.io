@@ -13,6 +13,7 @@ import github from '../images/languages/github_1.png';
 import html from '../images/languages/html.svg';
 import java from '../images/languages/java.svg';
 import javascript from '../images/languages/javascript.svg';
+import kotlin from '../images/languages/kotlin.svg';
 import material_ui from '../images/languages/material-ui.png';
 import mongodb from '../images/languages/mongodb.svg';
 import mysql from '../images/languages/mysql.svg';
@@ -51,120 +52,126 @@ const skill_data = [
 
     {
       id: 5,
+      name: "Kotlin",
+      img: kotlin,
+    },
+
+    {
+      id: 6,
       name: "Javascript",
       img: javascript,
     },
     
     {
-      id: 6,
+      id: 7,
       name: "Python",
       img: python,
     },
 
     {
-      id: 7,
+      id: 8,
       name: "HTML",
       img: html,
     },
 
     {
-      id: 8,
+      id: 9,
       name: "CSS",
       img: css,
     },
     
     {
-      id: 9,
+      id: 10,
       name: "Oracle Database",
       img: database,
     },
     
     {
-      id: 10,
+      id: 11,
       name: "MySQL",
       img: mysql,
     },
     
     {
-      id: 11,
+      id: 12,
       name: "MongoDB",
       img: mongodb,
     },
     
     {
-      id: 12,
+      id: 13,
       name: "React",
       img: react,
     },
    
     {
-      id: 13,
+      id: 14,
       name: "Node.js",
       img: node,
     },
     
     {
-      id: 14,
+      id: 15,
       name: "Material UI",
       img: material_ui,
     },
 
     {
-      id: 15,
+      id: 16,
       name: "React Bootstrap",
       img: react_bootstrap,
     },
     
     {
-      id: 16,
+      id: 17,
       name: "Firebase",
       img: firebase,
     },
     
     {
-      id: 17,
+      id: 18,
       name: "Django",
       img: django,
     },
     
     {
-      id: 18,
+      id: 19,
       name: "Git",
       img: git,
     },
 
     {
-      id: 18,
+      id: 20,
       name: "GitHub",
       img: github,
     },
     
     {
-      id: 19,
+      id: 21,
       name: "Docker",
       img: docker,
     },
     
     {
-      id: 20,
+      id: 22,
       name: "Microsoft Azure",
       img: azure,
     },
     
     {
-      id: 21,
+      id: 23,
       name: "Android Studio",
       img: android,
     },
 
     {
-      id: 22,
+      id: 24,
       name: "Visual Studio",
       img: visual_studio,
     },
 
     {
-      id: 23,
+      id: 25,
       name: "Visual Studio Code",
       img: vscode,
     },
