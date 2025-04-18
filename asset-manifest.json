@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.07b8cd72.css",
-    "main.js": "/static/js/main.664dc309.js",
+    "main.js": "/static/js/main.d88dc7d8.js",
     "static/js/488.ae92df01.chunk.js": "/static/js/488.ae92df01.chunk.js",
     "static/media/profile.png": "/static/media/profile.76907253cf69c9529e32.png",
     "static/media/github_1.png": "/static/media/github_1.7495fdae5f3ac0014163.png",
@@ -21,6 +21,7 @@
     "static/media/javascript.svg": "/static/media/javascript.8ef0643e564a03e327b1d6da968e794a.svg",
     "static/media/cpp.svg": "/static/media/cpp.1f3ece5b936b9c6ac0b08703f3811d90.svg",
     "static/media/git.svg": "/static/media/git.1f944ba916d632fda5ffd5654a0476ab.svg",
+    "static/media/kotlin.svg": "/static/media/kotlin.c80502cdc9a0d2f7af03dcabd71a5cec.svg",
     "static/media/c.svg": "/static/media/c.a5205ccd701829ecfd5e4d4be39d3665.svg",
     "static/media/firebase.svg": "/static/media/firebase.06916b8648930adafd6620d700f0661d.svg",
     "static/media/visualstudio.svg": "/static/media/visualstudio.fab5240e362095dc23dcb616d69f4e4a.svg",
@@ -31,11 +32,11 @@
     "static/media/azure.svg": "/static/media/azure.307dcb223ae05909e6f823778ee144c0.svg",
     "static/media/java.svg": "/static/media/java.9723b91156c67f3cf6ba55441a19f04d.svg",
     "main.07b8cd72.css.map": "/static/css/main.07b8cd72.css.map",
-    "main.664dc309.js.map": "/static/js/main.664dc309.js.map",
+    "main.d88dc7d8.js.map": "/static/js/main.d88dc7d8.js.map",
     "488.ae92df01.chunk.js.map": "/static/js/488.ae92df01.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.07b8cd72.css",
-    "static/js/main.664dc309.js"
+    "static/js/main.d88dc7d8.js"
   ]
 }
