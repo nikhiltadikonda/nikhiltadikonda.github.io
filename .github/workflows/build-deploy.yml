@@ -2,11 +2,10 @@ name: Build React Webpage
 
 on:
   push:
-    branches: [ master ]
+    branches: [master]
   pull_request:
-    branches: [ master ]
+    branches: [master]
 
-# Native cancellation of previous runs on the same branch
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
@@ -16,52 +15,51 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     env:
-      REACT_APP_QUOTES_API_URL: ${{ secrets.REACT_APP_QUOTES_API_URL }}
-      REACT_APP_GITHUB_API_URL: ${{ secrets.REACT_APP_GITHUB_API_URL }}
-      REACT_APP_SOCIALIFY_URL : ${{ secrets.REACT_APP_SOCIALIFY_URL }}
-      REACT_APP_SOCIALIFY_URL_PARAM : ${{ secrets.REACT_APP_SOCIALIFY_URL_PARAM }}
-    
-    steps:
-    - name: Checkout Repo
-      uses: actions/checkout@v4
-    
-    - name: Install Node.js
-      uses: actions/setup-node@v4
-      with:
-        node-version: 24
-        cache: npm
-    
-    - name: Install NPM packages
-      run: npm install --legacy-peer-deps --force
-    
-    - name: Build Generation
-      run: npm run build
+      VITE_QUOTES_API_URL: ${{ secrets.REACT_APP_QUOTES_API_URL }}
+      VITE_GITHUB_API_URL: ${{ secrets.REACT_APP_GITHUB_API_URL }}
+      VITE_SOCIALIFY_URL: ${{ secrets.REACT_APP_SOCIALIFY_URL }}
+      VITE_SOCIALIFY_URL_PARAM: ${{ secrets.REACT_APP_SOCIALIFY_URL_PARAM }}
 
-    - name: Upload build artifact
-      uses: actions/upload-artifact@v4
-      with:
-        name: production-files
-        path: ./build
-        if-no-files-found: error
-  
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Install NPM packages
+        run: npm install --legacy-peer-deps
+
+      - name: Build Generation
+        run: npm run build
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: production-files
+          path: ./dist
+          if-no-files-found: error
+
   deploy:
     name: Deploy
     needs: build
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/master'
-    # Required permission for modern GitHub Actions tokens to push pages
     permissions:
       contents: write
-    
-    steps:
-    - name: Download artifact
-      uses: actions/download-artifact@v4
-      with:
-        name: production-files
-        path: ./build
 
-    - name: Deploy to gh-pages
-      uses: peaceiris/actions-gh-pages@v4
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./build
+    steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: production-files
+          path: ./dist
+
+      - name: Deploy to gh-pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist

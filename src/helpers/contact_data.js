@@ -1,7 +1,7 @@
 import envelope from '../images/contact/envelope.png';
 import github from '../images/languages/github.png';
 import linkedin from '../images/contact/linkedin.png';
-import twitter from '../images/contact/twitter.png';
+import x from '../images/contact/x.png';
 
 const contact_data = [
     {
@@ -24,8 +24,8 @@ const contact_data = [
     
       {
         id: 4,
-        img: twitter,
-        url: "https://twitter.com/nikhiltadikonda",
+        img: x,
+        url: "https://x.com/nikhiltadikonda",
       },
         
 ];

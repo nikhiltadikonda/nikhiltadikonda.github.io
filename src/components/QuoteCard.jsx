@@ -9,7 +9,7 @@ function QuoteCard() {
 
   React.useEffect(() => {
     axios
-      .get(`${process.env.REACT_APP_QUOTES_API_URL}`, {
+      .get(`${import.meta.env.VITE_QUOTES_API_URL}`, {
         headers: {
           Accept: "application/json",
         },
