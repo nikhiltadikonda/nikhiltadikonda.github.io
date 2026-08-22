@@ -48,7 +48,7 @@ reset: clean ## Hard-wipe modules and lockfiles, then rebuild dependency graphs
 	rm -f $(LOCK_FILE)
 	npm cache clean --force
 	@echo "🚀 Constructing clean installation pipeline..."
-	npm install --legacy-peer-deps
+	npm install
 
 .PHONY: help
 help: ## Display a map of all available shorthand execution routines
