@@ -1,81 +1,91 @@
-# Nikhil Tadikonda's Personal Website
+# Nikhil Tadikonda — Personal Portfolio
+
+[![Website](https://img.shields.io/badge/Live%20Site-nikhiltadikonda.github.io-10b981?style=flat-square&logo=safari&logoColor=white)](https://nikhiltadikonda.github.io)
 
 
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/nikhiltadikonda/nikhiltadikonda.github.io/Build%20React%20Webpage?style=flat-square&logo=github&logoWidth=20)
-![GitHub issues](https://img.shields.io/github/issues/nikhiltadikonda/nikhiltadikonda.github.io?style=flat-square&logo=github&logoWidth=20)
-![GitHub pull requests](https://img.shields.io/github/issues-pr/nikhiltadikonda/nikhiltadikonda.github.io?style=flat-square&logo=github&logoWidth=20)
+[![Vite 8](https://img.shields.io/badge/Vite-8-646CFF?style=flat-square&logo=vite&logoColor=white)](https://vitejs.dev/)
+[![React 19](https://img.shields.io/badge/React-19-61DAFB?style=flat-square&logo=react&logoColor=black)](https://react.dev/)
+[![Material UI 9](https://img.shields.io/badge/MUI-9-007FFF?style=flat-square&logo=mui&logoColor=white)](https://mui.com/)
 
-![GitHub language count](https://img.shields.io/github/languages/count/nikhiltadikonda/nikhiltadikonda.github.io?style=flat-square&logo=github&logoWidth=20)
-![GitHub Repo stars](https://img.shields.io/github/stars/nikhiltadikonda/nikhiltadikonda.github.io?style=flat-square&logo=github&logoWidth=20)
-![GitHub Repo stars](https://img.shields.io/github/forks/nikhiltadikonda/nikhiltadikonda.github.io?style=flat-square&logo=github&logoWidth=20)
+A modern developer portfolio designed with **React**, **Vite**, and **Material-UI**. Styled with **Liquid Glass Skeuomorphism**, **SF Mono** typography, and a **Cyber Matrix Terminal Green** ambient aesthetic.
 
+---
 
+## 🛠️ Tech Stack
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+| Category | Tools & Libraries |
+| :--- | :--- |
+| **Core** | React 19, TypeScript, Vite 8 |
+| **UI & Styling** | Material-UI (MUI 9), Emotion, Custom Glass Design Tokens |
+| **Testing** | Vitest, React Testing Library, JSDOM |
+| **Icons & Media** | Material-UI Icons, Socialify Dynamic GitHub Banners |
+| **Deployment** | GitHub Pages (Automated CI/CD) |
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Quick Start
 
-### `npm start`
+### Prerequisites
+- Node.js `>= 23.0.0`
+- npm `>= 10.0.0`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Setup & Development
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+```bash
+# 1. Clone repository
+git clone https://github.com/nikhiltadikonda/nikhiltadikonda.github.io.git
+cd nikhiltadikonda.github.io
 
-### `npm test`
+# 2. Install dependencies
+npm install
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# 3. Start local development server (runs on port 3000)
+npm start
+```
 
-### `npm run build`
+### Build & Testing
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+# Run unit & integration tests
+npm test
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Run TypeScript type checks
+npx tsc --noEmit
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Compile production build to /dist
+npm run build
+```
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## 📁 Project Structure
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+nikhiltadikonda.github.io/
+├── public/                 # Static assets, web manifest, and favicons
+├── src/
+│   ├── components/         # Reusable UI components
+│   │   ├── common/         # GlassCard, GlassPill, ScrollToTop, SectionHeader
+│   │   ├── layout/         # AmbientBackground, MatrixRain canvas
+│   │   ├── ImageIcon.tsx   # Crisp vector social media icons
+│   │   ├── NavBar.tsx      # Symmetrical 3-column sticky glass header dock
+│   │   ├── ProjectCard.tsx # 3D skeuomorphic project card with Socialify banner
+│   │   ├── QuoteCard.tsx   # Interactive collapsible quote widget
+│   │   └── SkillBadge.tsx  # Monospaced technology pill badge
+│   ├── context/            # ThemeContext & color mode engine
+│   ├── helpers/            # Skills, contact, and metadata datasets
+│   ├── hooks/              # useGitHubProjects, useQuote, useScrollPosition
+│   ├── sections/           # Top-level page sections (About, Skills, Projects, Contact)
+│   ├── styles/             # Global CSS and liquid glass design tokens
+│   ├── tests/              # Vitest test suite & setup
+│   ├── theme/              # MUI theme, design tokens, and cyber green palette
+│   └── App.tsx             # Root application component
+├── vite.config.mjs         # Vite 8 build & vendor chunk splitting configuration
+└── package.json            # Scripts and dependencies
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+---
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## 📄 License
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is open-source and licensed under the [MIT License](LICENSE).

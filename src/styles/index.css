@@ -1,36 +1,108 @@
+:root {
+  --bg-dark: #050907;
+  --bg-light: #f6fbf8;
+  --text-dark: #f8fafc;
+  --text-light: #0f172a;
+  --font-main: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'Fira Code', monospace;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
-  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: var(--font-main);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Dark Theme Default */
+body.dark-theme,
+[data-theme='dark'] body {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+  color-scheme: dark;
 }
 
-.about{
-  text-align: center;
+/* Light Theme */
+body.light-theme,
+[data-theme='light'] body {
+  background-color: var(--bg-light);
+  color: var(--text-light);
+  color-scheme: light;
 }
 
-.contact{
-  text-align: center;
-}
-
-.projects{
-  text-align: center;
-}
-
-.shruggie {
-  text-align: center;
-}
-
-.header-paragraph{
+::selection {
+  background: rgba(16, 185, 129, 0.45);
   color: #ffffff;
-  font-size: 1.3rem;
-  padding-top: 30px;
+}
 
+/* Ambient Radial Glow Gradients in Background */
+.ambient-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+  transition: background 0.4s ease;
+}
+
+body.dark-theme .ambient-background,
+[data-theme='dark'] .ambient-background {
+  background: 
+    radial-gradient(circle at 15% 20%, rgba(16, 185, 129, 0.16) 0%, transparent 40%),
+    radial-gradient(circle at 85% 30%, rgba(6, 182, 212, 0.12) 0%, transparent 45%),
+    radial-gradient(circle at 50% 80%, rgba(5, 150, 105, 0.1) 0%, transparent 50%),
+    #050907;
+}
+
+body.light-theme .ambient-background,
+[data-theme='light'] .ambient-background {
+  background: 
+    radial-gradient(circle at 15% 20%, rgba(16, 185, 129, 0.12) 0%, transparent 45%),
+    radial-gradient(circle at 85% 30%, rgba(6, 182, 212, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 50% 80%, rgba(52, 211, 153, 0.08) 0%, transparent 50%),
+    #f6fbf8;
+}
+
+/* Grid overlay background effect */
+.grid-mesh {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  pointer-events: none;
+  background-size: 60px 60px;
+  mask-image: radial-gradient(circle at center, black, transparent 80%);
+  -webkit-mask-image: radial-gradient(circle at center, black, transparent 80%);
+  transition: background-image 0.4s ease;
+}
+
+body.dark-theme .grid-mesh,
+[data-theme='dark'] .grid-mesh {
+  background-image: linear-gradient(rgba(16, 185, 129, 0.04) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(16, 185, 129, 0.04) 1px, transparent 1px);
+}
+
+body.light-theme .grid-mesh,
+[data-theme='light'] .grid-mesh {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.035) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(0, 0, 0, 0.035) 1px, transparent 1px);
 }
