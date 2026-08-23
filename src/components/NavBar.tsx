@@ -376,7 +376,7 @@ export const NavBar: React.FC = () => {
               sx={{
                 gridColumn: 2,
                 justifySelf: 'end',
-                display: { md: 'none' },
+                display: { xs: 'flex', md: 'none' },
                 alignItems: 'center',
                 gap: 1,
               }}
@@ -386,32 +386,58 @@ export const NavBar: React.FC = () => {
                 size="small"
                 aria-label="Toggle light and dark theme"
                 sx={{
+                  width: 38,
+                  height: 38,
                   color: isDark ? '#f1f5f9' : '#0f172a',
                   background: isDark ? 'rgba(255, 255, 255, 0.06)' : 'rgba(0, 0, 0, 0.04)',
+                  backdropFilter: 'blur(12px)',
                   border: isDark ? '1px solid rgba(255, 255, 255, 0.1)' : '1px solid rgba(0, 0, 0, 0.1)',
-                  p: 0.8,
+                  borderRadius: '50%',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  transition: 'all 0.2s ease',
+                  '&:hover': {
+                    background: isDark ? 'rgba(16, 185, 129, 0.15)' : 'rgba(16, 185, 129, 0.1)',
+                    borderColor: '#10b981',
+                  },
                 }}
               >
                 {isDark ? (
-                  <LightModeOutlinedIcon sx={{ fontSize: 18, color: '#facc15' }} />
+                  <LightModeOutlinedIcon sx={{ fontSize: 20, color: '#facc15' }} />
                 ) : (
-                  <DarkModeOutlinedIcon sx={{ fontSize: 18, color: '#10b981' }} />
+                  <DarkModeOutlinedIcon sx={{ fontSize: 20, color: '#10b981' }} />
                 )}
               </IconButton>
 
               <IconButton
                 color="inherit"
                 aria-label="open drawer"
-                edge="end"
+                size="small"
                 onClick={handleDrawerToggle}
                 sx={{
+                  width: 38,
+                  height: 38,
+                  color: isDark ? '#f1f5f9' : '#0f172a',
                   background: isDark ? 'rgba(255, 255, 255, 0.06)' : 'rgba(0, 0, 0, 0.04)',
                   backdropFilter: 'blur(12px)',
                   border: isDark ? '1px solid rgba(255, 255, 255, 0.1)' : '1px solid rgba(0, 0, 0, 0.1)',
-                  '&:hover': { background: isDark ? 'rgba(255, 255, 255, 0.12)' : 'rgba(0, 0, 0, 0.08)' },
+                  borderRadius: '50%',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  transition: 'all 0.2s ease',
+                  '&:hover': {
+                    background: isDark ? 'rgba(255, 255, 255, 0.12)' : 'rgba(0, 0, 0, 0.08)',
+                    borderColor: '#10b981',
+                  },
                 }}
               >
-                {mobileOpen ? <CloseIcon /> : <MenuIcon />}
+                {mobileOpen ? (
+                  <CloseIcon sx={{ fontSize: 20 }} />
+                ) : (
+                  <MenuIcon sx={{ fontSize: 20 }} />
+                )}
               </IconButton>
             </Box>
           </Toolbar>
@@ -440,8 +466,8 @@ export const NavBar: React.FC = () => {
         }}
       >
         <List sx={{ width: '100%', py: 1 }}>
-          {navItems.map((item) => (
-            <ListItem key={item.label} disablePadding sx={{ mb: 1 }}>
+          {navItems.map((item, index) => (
+            <ListItem key={item.label} disablePadding sx={{ mb: index === navItems.length - 1 ? 0 : 1 }}>
               <ListItemButton
                 onClick={() => handleNavClick(item.href, item.id)}
                 sx={{
@@ -471,22 +497,6 @@ export const NavBar: React.FC = () => {
               </ListItemButton>
             </ListItem>
           ))}
-          <ListItem disablePadding sx={{ mt: 1 }}>
-            <Button
-              fullWidth
-              variant="contained"
-              onClick={() => handleNavClick('#contact', 'contact')}
-              sx={{
-                py: 1.5,
-                borderRadius: '16px',
-                fontFamily: MONO_FONT_STACK,
-                fontWeight: 700,
-                fontSize: '0.88rem',
-              }}
-            >
-              Get in Touch
-            </Button>
-          </ListItem>
         </List>
       </Drawer>
     </NavContainer>

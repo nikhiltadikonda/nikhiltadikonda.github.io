@@ -77,7 +77,7 @@ jobs:
           # 1. Tagged Version Release -> Root Production (nikhiltadikonda.github.io)
           if [[ "$REF" == refs/tags/v* ]]; then
             echo "Matched Version Tag -> Deploying to Production (root)"
-            echo "target=production" >> $GITHUB_OUTPUT
+            echo "target=prod" >> $GITHUB_OUTPUT
             echo "dest_dir=." >> $GITHUB_OUTPUT
 
           # 2. Main / Master Branch -> Dev Release (nikhiltadikonda.github.io/dev)
@@ -121,3 +121,41 @@ jobs:
           publish_dir: ./dist
           destination_dir: ${{ needs.determine-deployment.outputs.dest_dir == '.' && '' || needs.determine-deployment.outputs.dest_dir }}
           keep_files: true
+
+  bump-version-post-prod:
+    name: Bump Version Post-Production
+    needs: [determine-deployment, deploy]
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' && needs.determine-deployment.outputs.target == 'prod'
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout main branch
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Configure Git Author
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Increment Version in VERSION and package.json
+        run: |
+          # Increment patch version in package.json without creating git tag
+          NEW_VERSION=$(npm version patch --no-git-tag-version)
+          CLEAN_VERSION="${NEW_VERSION#v}"
+          echo "$CLEAN_VERSION" > VERSION
+          echo "Incremented version to $CLEAN_VERSION"
+
+          git add VERSION package.json
+          git commit -m "chore(release): bump version to $CLEAN_VERSION [skip ci]" || echo "No changes to commit"
+          git push origin main
