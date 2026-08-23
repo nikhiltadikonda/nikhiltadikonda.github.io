@@ -7,14 +7,13 @@ on:
       - master
       - 'release/**'
       - 'release/v*.*.*'
-      - 'release/*.*.*'
     tags:
-      - 'v*'
+      - 'v*.*.*'
   pull_request:
     branches:
       - main
       - master
-      - 'release/**'
+      - 'release/v*.*.*'
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
