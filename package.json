@@ -25,7 +25,8 @@
     "start": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "test": "vitest run"
+    "test": "vitest run",
+    "release:branch": "bash ./create-release-branch.sh"
   },
   "eslintConfig": {
     "extends": [
