@@ -2,51 +2,122 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="./favicon/n_icon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     
-    <meta name="theme-color" content="#1C1C1E" />
-    <meta name="description" content="Nikhil Tadikonda Personal Website"/>
+    <meta name="theme-color" content="#07090e" />
     
-    <meta name="msapplication-navbutton-color" content="#434345">
-    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Primary Meta Tags -->
+    <title>Nikhil Tadikonda | Full Stack Developer</title>
+    <meta name="title" content="Nikhil Tadikonda | Full Stack Developer" />
+    <meta name="description" content="Personal engineering portfolio by Nikhil Tadikonda" />
+    <meta name="author" content="Nikhil Tadikonda" />
+    <meta name="keywords" content="Nikhil Tadikonda, Full Stack Developer" />
+    <link rel="canonical" href="https://nikhiltadikonda.github.io/" />
+    
+    <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="Twitter">
+    <meta name="apple-mobile-web-app-title" content="Nikhil Tadikonda">
 
-    <meta property="og:site_name" content="nikhiltadikonda.github.io">
-    <meta property="og:title" content="Nikhil Tadikonda" />
-    <meta property="og:description" content="Nikhil Tadikonda Personal Website" />
+    <!-- Open Graph / Facebook / WhatsApp / LinkedIn / Slack -->
     <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://nikhiltadikonda.github.io/" />
+    <meta property="og:site_name" content="Nikhil Tadikonda" />
+    <meta property="og:title" content="Nikhil Tadikonda | Full Stack Developer" />
+    <meta property="og:description" content="Personal engineering portfolio by Nikhil Tadikonda" />
+    <meta property="og:image" content="https://nikhiltadikonda.github.io/og-image.jpg" />
+    <meta property="og:image:secure_url" content="https://nikhiltadikonda.github.io/og-image.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Nikhil Tadikonda - Full Stack Developer" />
+    <meta property="og:locale" content="en_US" />
 
-    <!-- External Bootstrap 4 fallback styles (Can keep or remove since you installed Bootstrap 5 via npm) -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/styles.css">
+    <!-- Twitter / X Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://nikhiltadikonda.github.io/" />
+    <meta name="twitter:title" content="Nikhil Tadikonda | Full Stack Developer" />
+    <meta name="twitter:description" content="Personal engineering portfolio by Nikhil Tadikonda" />
+    <meta name="twitter:image" content="https://nikhiltadikonda.github.io/og-image.jpg" />
+    <meta name="twitter:image:alt" content="Nikhil Tadikonda - Full Stack Developer" />
 
-    <!-- Favicon configurations (cleaned from %PUBLIC_URL%) -->
-    <link rel="shortcut icon" type="image/x-icon" sizes="48x48" href="/favicon/favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="/favicon/android-chrome-192x192.png">
-    <link rel="icon" type="image/png" sizes="512x512" href="/favicon/android-chrome-512x512.png">
-    <link rel="shortcut icon" type="image/png" href="/favicon/apple-safari-512x512.png">
-    <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <!-- Schema.org JSON-LD Structured Data for Search Engine Indexing -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Nikhil Tadikonda",
+        "url": "https://nikhiltadikonda.github.io/",
+        "jobTitle": "Full Stack Developer",
+        "sameAs": [
+          "https://github.com/nikhiltadikonda",
+          "https://www.linkedin.com/in/nikhiltadikonda"
+        ],
+        "knowsAbout": [
+          "Full Stack Web Development",
+          "React",
+          "TypeScript",
+          "JavaScript",
+          "Java",
+          "Kotlin",
+          "Python",
+          "C",
+          "C++",
+          "C#",
+          "HTML5",
+          "CSS3",
+          "Material UI",
+          "React Bootstrap",
+          "Spring Boot",
+          "Node.js",
+          "Django",
+          "Firebase",
+          "Google Cloud",
+          "Google Cloud Storage",
+          "Microsoft Azure",
+          "DevOps",
+          "MLOps",
+          "Distributed Systems",
+          "Agent Platform (Vertex AI)",
+          "BigQuery - ML/AI",
+          "Oracle",
+          "MySQL",
+          "MongoDB",
+          "Docker",
+          "Git",
+          "GitHub",
+          "Android Studio",
+          "VS Code",
+          "Visual Studio"
+        ]
+      }
+    </script>
 
-    <link rel="manifest" href="/favicon/manifest.json" />
+    <!-- Google Fonts: Plus Jakarta Sans, Inter, Fira Code -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <title>Nikhil Tadikonda</title>
-    <script type="module" crossorigin src="./assets/index-YuXVvN5g.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-DwtigGbv.css">
+    <!-- Favicon configurations (Pure Vector SVG & Adaptive Dark / Light / Default) -->
+    <link rel="icon" type="image/svg+xml" href="./favicon/favicon.svg" />
+    <link rel="icon" type="image/png" href="./favicon/n_icon_dark.png" media="(prefers-color-scheme: dark)" />
+    <link rel="icon" type="image/png" href="./favicon/n_icon_light.png" media="(prefers-color-scheme: light)" />
+    <link rel="icon" type="image/png" href="./favicon/n_icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="./favicon/manifest.json" />
+    <script type="module" crossorigin src="./assets/index-FRjjEs-2.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/rolldown-runtime-hePW80VL.js">
+    <link rel="modulepreload" crossorigin href="./assets/vendor-D8IDVU1d.js">
+    <link rel="modulepreload" crossorigin href="./assets/vendor-mui-Bf7h3amW.js">
+    <link rel="modulepreload" crossorigin href="./assets/vendor-react-Cs-lnrxz.js">
+    <link rel="stylesheet" crossorigin href="./assets/index-Dhe945SJ.css">
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     
     <div id="root"></div>
 
-    <!-- 1. The script mount entry point required by Vite to launch React -->
-
-    <!-- External Bootstrap scripts (Keep only if legacy components explicitly need jQuery) -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <!-- Vite entry point for React + TypeScript -->
   </body>
 </html>
