@@ -9,7 +9,7 @@ import django from '../images/languages/django.svg';
 import docker from '../images/languages/docker.svg';
 import firebase from '../images/languages/firebase.svg';
 import git from '../images/languages/git.svg';
-import github from '../images/languages/github_1.png';
+import github from '../images/languages/github_1.svg';
 import html from '../images/languages/html.svg';
 import java from '../images/languages/java.svg';
 import javascript from '../images/languages/javascript.svg';

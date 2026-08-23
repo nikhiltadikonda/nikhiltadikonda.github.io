@@ -13,6 +13,7 @@ import profile from '../images/profile.png';
 import ImageIcon from '../components/ImageIcon';
 import GlassCard from '../components/common/GlassCard';
 import GradientText from '../components/common/GradientText';
+import DecodedText from '../components/common/DecodedText';
 import contact_data from '../helpers/contact_data';
 import { MONO_FONT_STACK } from '../theme/tokens';
 
@@ -124,15 +125,12 @@ const FooterContainer = styled('footer')(({ theme }) => ({
   textAlign: 'center',
   display: 'flex',
   flexDirection: 'column',
-  justifyContent: 'space-between',
+  justifyContent: 'center',
   alignItems: 'center',
-  gap: theme.spacing(2),
-  [theme.breakpoints.up('sm')]: {
-    flexDirection: 'row',
-  },
+  gap: theme.spacing(1.5),
 }));
 
-const FooterTagline = styled(Typography)(({ theme }) => {
+const FooterTagline = styled(DecodedText)(({ theme }) => {
   const isDark = theme.palette.mode === 'dark';
   return {
     color: isDark ? '#94a3b8' : '#475569',
@@ -143,6 +141,8 @@ const FooterTagline = styled(Typography)(({ theme }) => {
     fontWeight: 600,
     letterSpacing: '0.01em',
     fontSize: '0.8rem',
+    display: 'inline-block',
+    userSelect: 'none',
   };
 });
 
@@ -214,9 +214,14 @@ export const Contact: React.FC = () => {
             © {yearString} Nikhil Tadikonda • All rights reserved.
           </Typography>
 
-          <FooterTagline variant="caption">
-            Solving problems, one release at a time! 🚀
-          </FooterTagline>
+          <FooterTagline
+            variant="caption"
+            text="Solving problems, one release at a time! 🚀"
+            holdDecodedTime={3500}
+            holdEncodedTime={2500}
+            encodeDuration={900}
+            decodeDuration={900}
+          />
         </FooterContainer>
       </Container>
     </ContactSectionWrapper>

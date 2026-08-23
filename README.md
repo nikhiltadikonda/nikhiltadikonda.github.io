@@ -58,43 +58,6 @@ npm run build
 
 ---
 
-## 🌿 Release Management & CI/CD Deployment
-
-The repository uses automated multi-environment GitHub Actions routing:
-
-| Environment | Trigger | Target URL |
-| :--- | :--- | :--- |
-| **Development** | Push to `main` / `master` | [`nikhiltadikonda.github.io/dev`](https://nikhiltadikonda.github.io/dev/) |
-| **Staging** | Push to `release/v*.*.*` | [`nikhiltadikonda.github.io/stage`](https://nikhiltadikonda.github.io/stage/) |
-| **Production** | Push SemVer tag `v*.*.*` | [`nikhiltadikonda.github.io`](https://nikhiltadikonda.github.io/) |
-
-### 🚀 Creating a Release Branch Locally
-
-Use the helper script to create a local release branch (without pushing to remote):
-
-```bash
-# 1. Using current version from VERSION file:
-./create-release-branch.sh
-
-# 2. Incrementing automatically (patch / minor / major):
-./create-release-branch.sh patch
-./create-release-branch.sh minor
-./create-release-branch.sh major
-
-# 3. Specifying an explicit version:
-./create-release-branch.sh 0.2.0
-# or
-./create-release-branch.sh v0.2.0
-
-# 4. Via npm shortcut:
-npm run release:branch
-```
-
-> **Note**: The script creates and checks out `release/vX.Y.Z`, updates `VERSION` and `package.json`, and creates a local commit. When you are ready to deploy to staging, run `git push -u origin release/vX.Y.Z`.
-
-
----
-
 ## 📁 Project Structure
 
 ```

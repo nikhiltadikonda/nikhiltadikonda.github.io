@@ -21,12 +21,14 @@ export const useQuote = (): UseQuoteResult => {
   const [isRotating, setIsRotating] = useState<boolean>(false);
 
   const fetchQuote = useCallback(async () => {
+    // This resolves to "/api/random"
     const apiUrl = import.meta.env.VITE_QUOTES_API_URL;
     if (!apiUrl) return;
 
     setLoading(true);
     setIsRotating(true);
     try {
+      // Axios requests http://localhost:3000/api/random, bypassing CORS
       const response = await axios.get(apiUrl, {
         headers: { Accept: 'application/json' },
         timeout: 5000,
@@ -50,4 +52,3 @@ export const useQuote = (): UseQuoteResult => {
 };
 
 export default useQuote;
-

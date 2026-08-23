@@ -26,7 +26,15 @@ export const useGitHubProjects = (): UseGitHubProjectsResult => {
       .get<GitHubRepo[]>(apiUrl, { timeout: 8000 })
       .then((response) => {
         if (isMounted) {
-          setProjects(response.data);
+          // Sort by most recently updated
+          const sorted = response.data
+            .sort((a, b) => {
+              const dateA = a.updated_at ? new Date(a.updated_at).getTime() : 0;
+              const dateB = b.updated_at ? new Date(b.updated_at).getTime() : 0;
+              return dateB - dateA;
+            });
+
+          setProjects(sorted);
           setError(null);
         }
       })
@@ -51,4 +59,3 @@ export const useGitHubProjects = (): UseGitHubProjectsResult => {
 };
 
 export default useGitHubProjects;
-

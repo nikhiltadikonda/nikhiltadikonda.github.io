@@ -11,6 +11,12 @@ interface SkillBadgeProps {
 export const SkillBadge: React.FC<SkillBadgeProps> = ({ skill }) => {
   const { mode } = useColorMode();
   const isDark = mode === 'dark';
+  const isMonochrome = skill.name === 'GitHub';
+  const iconFilter = isDark
+    ? isMonochrome
+      ? 'invert(1) drop-shadow(0 2px 4px rgba(255, 255, 255, 0.2))'
+      : 'drop-shadow(0 2px 4px rgba(0,0,0,0.4))'
+    : 'none';
 
   return (
     <Box
@@ -33,7 +39,7 @@ export const SkillBadge: React.FC<SkillBadgeProps> = ({ skill }) => {
           width: 24,
           height: 24,
           objectFit: 'contain',
-          filter: isDark ? 'drop-shadow(0 2px 4px rgba(0,0,0,0.4))' : 'none',
+          filter: iconFilter,
         }}
       />
       <Typography
