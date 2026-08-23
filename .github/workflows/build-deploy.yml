@@ -175,7 +175,7 @@ jobs:
             echo "🚀 Creating draft release '$TAG_NAME' targeted at branch '$BRANCH_NAME'..."
             gh release create "$TAG_NAME" \
               --target "$BRANCH_NAME" \
-              --title "Release $TAG_NAME" \
+              --title "$TAG_NAME" \
               --draft \
               --generate-notes
             echo "✅ Successfully created draft release '$TAG_NAME' with target branch '$BRANCH_NAME'."
