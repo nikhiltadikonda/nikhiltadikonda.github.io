@@ -115,13 +115,24 @@ git checkout -b release/v0.2.0
 git push -u origin release/v0.2.0
 ```
 
-> **Automated Pipeline**: Tests and builds the project, then deploys to [`nikhiltadikonda.github.io/stage`](https://nikhiltadikonda.github.io/stage).
+> **Automated Pipeline**:
+> 1. Tests and builds the project, then deploys to [`nikhiltadikonda.github.io/stage`](https://nikhiltadikonda.github.io/stage).
+> 2. Automatically creates a **GitHub Draft Release** for `vX.Y.Z` targeted at the release branch with auto-generated release notes.
 
 ---
 
 ### 3️⃣ Production Release (`prod`)
 
-Production deployment serving the live portfolio. Triggered by pushing an annotated Git tag with SemVer format (`vX.Y.Z`).
+Production deployment serving the live portfolio at root domain. Triggered by pushing an annotated Git tag (`vX.Y.Z`) or publishing the draft release.
+
+#### Option A: Publish the Draft Release on GitHub (Recommended)
+
+1. Navigate to **Releases** on GitHub.
+2. Open the auto-generated **Draft Release** created during Stage deployment.
+3. Review release notes and click **"Publish release"**.
+4. GitHub creates the tag pointing to the release branch, triggering the Production deployment pipeline.
+
+#### Option B: Tag Manually via CLI
 
 ```bash
 # 1. Switch to the verified release branch or main

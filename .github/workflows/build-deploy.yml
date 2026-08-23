@@ -66,6 +66,8 @@ jobs:
     outputs:
       target: ${{ steps.eval.outputs.target }}
       dest_dir: ${{ steps.eval.outputs.dest_dir }}
+      tag_name: ${{ steps.eval.outputs.tag_name }}
+      version: ${{ steps.eval.outputs.version }}
     steps:
       - name: Evaluate Ref & Deployment Route
         id: eval
@@ -76,27 +78,39 @@ jobs:
 
           # 1. Tagged Version Release -> Root Production (nikhiltadikonda.github.io)
           if [[ "$REF" == refs/tags/v* ]]; then
+            TAG_NAME="${REF_NAME}"
+            VERSION="${REF_NAME#v}"
             echo "Matched Version Tag -> Deploying to Production (root)"
             echo "target=prod" >> $GITHUB_OUTPUT
             echo "dest_dir=." >> $GITHUB_OUTPUT
+            echo "tag_name=$TAG_NAME" >> $GITHUB_OUTPUT
+            echo "version=$VERSION" >> $GITHUB_OUTPUT
 
           # 2. Main / Master Branch -> Dev Release (nikhiltadikonda.github.io/dev)
           elif [[ "$REF_NAME" == "main" || "$REF_NAME" == "master" ]]; then
             echo "Matched Main Branch -> Deploying to Dev (nikhiltadikonda.github.io/dev)"
             echo "target=dev" >> $GITHUB_OUTPUT
             echo "dest_dir=dev" >> $GITHUB_OUTPUT
+            echo "tag_name=" >> $GITHUB_OUTPUT
+            echo "version=" >> $GITHUB_OUTPUT
 
           # 3. Release Branch (SemVer regex) -> Stage Release (nikhiltadikonda.github.io/stage)
           # Pattern: ^release\/v?(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)$
-          elif [[ "$REF_NAME" =~ ^release\/v?(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)$ ]]; then
+          elif [[ "$REF_NAME" =~ ^release\/v?((0|[1-9][0-9]*)\.(0|[1-9][0-9]*)\.(0|[1-9][0-9]*))$ ]]; then
+            VERSION="${BASH_REMATCH[1]}"
+            TAG_NAME="v${VERSION}"
             echo "Matched Release Branch SemVer ($REF_NAME) -> Deploying to Stage (nikhiltadikonda.github.io/stage)"
             echo "target=stage" >> $GITHUB_OUTPUT
             echo "dest_dir=stage" >> $GITHUB_OUTPUT
+            echo "tag_name=$TAG_NAME" >> $GITHUB_OUTPUT
+            echo "version=$VERSION" >> $GITHUB_OUTPUT
 
           else
             echo "Ref $REF_NAME does not match any automated deployment target. Skipping deployment."
             echo "target=none" >> $GITHUB_OUTPUT
             echo "dest_dir=" >> $GITHUB_OUTPUT
+            echo "tag_name=" >> $GITHUB_OUTPUT
+            echo "version=" >> $GITHUB_OUTPUT
           fi
 
   deploy:
@@ -121,6 +135,51 @@ jobs:
           publish_dir: ./dist
           destination_dir: ${{ needs.determine-deployment.outputs.dest_dir == '.' && '' || needs.determine-deployment.outputs.dest_dir }}
           keep_files: true
+
+  create-draft-release-post-stage:
+    name: Create Draft Release Post-Stage
+    needs: [determine-deployment, deploy]
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' && needs.determine-deployment.outputs.target == 'stage'
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+
+      - name: Create Draft Release on GitHub
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TAG_NAME: ${{ needs.determine-deployment.outputs.tag_name }}
+          BRANCH_NAME: ${{ github.ref_name }}
+        run: |
+          echo "Processing draft release creation for tag: $TAG_NAME on branch: $BRANCH_NAME"
+
+          if [[ -z "$TAG_NAME" ]]; then
+            if [[ -f "VERSION" ]]; then
+              TAG_NAME="v$(tr -d '[:space:]' < VERSION)"
+            else
+              TAG_NAME="v$(node -p "require('./package.json').version")"
+            fi
+          fi
+
+          echo "Target tag name: $TAG_NAME"
+          echo "Target branch:    $BRANCH_NAME"
+
+          if gh release view "$TAG_NAME" >/dev/null 2>&1; then
+            echo "ℹ️ Release for '$TAG_NAME' already exists. Skipping draft release creation."
+          else
+            echo "🚀 Creating draft release '$TAG_NAME' targeted at branch '$BRANCH_NAME'..."
+            gh release create "$TAG_NAME" \
+              --target "$BRANCH_NAME" \
+              --title "Release $TAG_NAME" \
+              --draft \
+              --generate-notes
+            echo "✅ Successfully created draft release '$TAG_NAME' with target branch '$BRANCH_NAME'."
+          fi
 
   bump-version-post-prod:
     name: Bump Version Post-Production
