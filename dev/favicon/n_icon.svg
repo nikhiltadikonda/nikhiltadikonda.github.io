@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="bgGradDark" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0b1710" />
+      <stop offset="100%" stop-color="#040906" />
+    </linearGradient>
+
+    <linearGradient id="bgGradLight" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#edf4f0" />
+    </linearGradient>
+
+    <linearGradient id="promptGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="50%" stop-color="#34d399" />
+      <stop offset="100%" stop-color="#10b981" />
+    </linearGradient>
+
+    <linearGradient id="promptGradLight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0891b2" />
+      <stop offset="50%" stop-color="#059669" />
+      <stop offset="100%" stop-color="#047857" />
+    </linearGradient>
+
+    <!-- Glow Filters -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    .bg { fill: url(#bgGradDark); stroke: rgba(16, 185, 129, 0.4); stroke-width: 4; }
+    .divider { stroke: rgba(255, 255, 255, 0.15); stroke-width: 2; }
+    .prompt { stroke: url(#promptGrad); stroke-width: 36; stroke-linecap: round; stroke-linejoin: round; fill: none; filter: url(#glow); }
+    .cursor { stroke: url(#promptGrad); stroke-width: 32; stroke-linecap: round; fill: none; filter: url(#glow); }
+
+    @media (prefers-color-scheme: light) {
+      .bg { fill: url(#bgGradLight); stroke: rgba(16, 185, 129, 0.3); }
+      .divider { stroke: rgba(0, 0, 0, 0.1); }
+      .prompt { stroke: url(#promptGradLight); }
+      .cursor { stroke: url(#promptGradLight); }
+    }
+  </style>
+
+  <!-- Terminal Window Base -->
+  <rect class="bg" x="32" y="32" width="448" height="448" rx="88" ry="88" />
+
+  <!-- macOS Traffic Light Window Dots -->
+  <circle cx="116" cy="92" r="10" fill="#ff5f56" />
+  <circle cx="146" cy="92" r="10" fill="#ffbd2e" />
+  <circle cx="176" cy="92" r="10" fill="#27c93f" />
+
+  <!-- Titlebar Divider Line -->
+  <line class="divider" x1="56" y1="132" x2="456" y2="132" />
+
+  <!-- Prompt Chevron > -->
+  <path class="prompt" d="M 126 204 L 216 276 L 126 348" />
+
+  <!-- Blinking Cursor _ -->
+  <line class="cursor" x1="256" y1="348" x2="384" y2="348" />
+</svg>
